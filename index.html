@@ -8,19 +8,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
     <script src="p5.play.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
 
-
-    <script>
-      // Your web app's Firebase configuration
-      //add here
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    </script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBGkm5xia7tz4Ekfq1yiZsRGzUANqEEFeo",
+    authDomain: "multiplayercarracinggame-f5594.firebaseapp.com",
+    databaseURL: "https://multiplayercarracinggame-f5594.firebaseio.com",
+    projectId: "multiplayercarracinggame-f5594",
+    storageBucket: "multiplayercarracinggame-f5594.appspot.com",
+    messagingSenderId: "201333611357",
+    appId: "1:201333611357:web:18e1b1327c1c320c34e6b4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="js/form.js"></script>
+<script src="js/player.js"></script>
+<script src="js/game.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
   <body>
     <script src="sketch.js"></script>
+    
   </body>
 </html>
