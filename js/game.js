@@ -57,12 +57,16 @@ class Game{
                cars[index-1].x = x;
                cars[index-1].y = y;
                if(index === player.index){
-                   cars[index-1].shapeColor = "red";
+                 //  cars[index-1].shapeColor = "red";
+                 stroke(10);
+                 fill("red");
+                 ellipse(x,y,70,70);
+               
                    camera.position.x = displayWidth/2;
                    camera.position.y = cars[index-1].y;
                }
-             //  textSize(15);
-              // text(allPlayers[plr].name+" : "+allPlayers[plr].distance,120,display_position);
+              textSize(15);
+               text(allPlayers[plr].name+" : "+allPlayers[plr].distance,x-30,y+60);
             }
         }
         if(keyIsDown(UP_ARROW) && player.index !== null){
