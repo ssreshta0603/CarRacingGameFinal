@@ -39,9 +39,10 @@ class Game{
     }
     play(){
         form.hide();
-        textSize(30);
-        text("GAME START ",120,100);
+      //  textSize(30);
+      //s  text("GAME START ",120,100);
         Player.getPlayerInfo();
+        player.getCarsAtEnd();
         if(allPlayers !=undefined){
             background("#c68767");
             image(trackImg,0,-displayHeight*4,displayWidth,displayHeight*5);
@@ -65,8 +66,8 @@ class Game{
                    camera.position.x = displayWidth/2;
                    camera.position.y = cars[index-1].y;
                }
-              textSize(15);
-               text(allPlayers[plr].name+" : "+allPlayers[plr].distance,x-30,y+60);
+          //    textSize(15);
+            //   text(allPlayers[plr].name+" : "+allPlayers[plr].distance,x-30,y+60);
             }
         }
         if(keyIsDown(UP_ARROW) && player.index !== null){
@@ -76,12 +77,17 @@ class Game{
 
         if(player.distance > 3860){
             gameState = 2;
+            player.rank+=1;
+            Player.updateCarsAtEnd(player.rank);
+         //   text(player.name + " : " + player.distance + " : "+ player.rank,x-400,y);
+         console.log("hi");
         }
         drawSprites();
     }
 
     end(){
-        console.log("game End");
-        game.update(2);
+        console.log("gameEnded");
+        console.log(player.rank);
+     
     }
 }
